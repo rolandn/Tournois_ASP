@@ -1,0 +1,305 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+    font-style: normal;
+    background-color: white;
+    color: black;
+}
+/* *********************************************************** */
+/* caractéristiques des conteneurs (div) généraux pour la barre de menus, l'image
+ de l'école et le contenu de la page
+*/
+.cadre-general {
+    width: 921px;
+    margin: auto;
+    color: black;
+    background-color: white;
+    justify-content: center;
+    height: 1921px;
+}
+
+.cadre-menu {
+    width: 921px;
+    height: 55px;
+    margin: 0;
+}
+
+.cadre-image-ecole {
+    width: 921px;
+    height: 135px;
+    margin-top: 0 0 10px 0;
+}
+
+.cadre-contenu {
+    width: 921px;
+    height: auto;
+}
+/* *********************************************************** */
+/* caractéristiques de l'image de l'école */
+
+.image-ecoleexterieure {
+    height: 135px;
+    width: 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+/* caractéristiques des images à gauche dans la page d'accueil */
+.image-contenu-gauche {
+    width: 40%;
+    height: 40%;
+    float: left;
+    margin: 10px 10px 10px 0;
+    border-radius: 10px;
+}
+/* caractéristiques des images à droite dans la page d'accueil */
+.image-contenu-droite {
+    width: 40%;
+    height: 40%;
+    float: right; /* placement à droite */
+    margin: 10px 0 10px 10px;
+    border-radius: 10px;
+}
+
+/* *********************************************************** */
+/* caractéristiques des menus de la barre de menus */
+.menu-principal li {
+    float: left;
+    list-style: none;
+}
+
+.menu-principal-lien {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    display: block;
+    height: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.menu-principal-lien:hover {
+    color: black;
+    background-color: rgb(220,230,255);
+    border-radius: 5px;
+}
+
+/* caractéristiques de l'image de la maison à côté de "L'accueil" */
+.imagehome {
+    float: left;
+    vertical-align: middle;
+    height: 15px;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+}
+
+/* *********************************************************** */
+/* caractéristiques pour les titres et paragraphes */
+p {
+    text-align: justify;
+    color: black;
+    font-size: 14px;
+    margin: 10px 0 15px 0;
+}
+
+h1 {
+    margin: 20px 0 20px 0;
+    padding: 0 0 5px 0;
+    text-align: center;
+    font-style: normal;
+    color: royalblue;
+    border-radius: 10px;
+    border: 1px solid rgb(220,230,255);
+    background-color: rgb(250,251,255);
+}
+
+h3 {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: royalblue;
+    text-align: center;
+    background-color: white;
+}
+/* *********************************************************** */
+/* caractéristiques pour les motifs répétés lors du listage des élèves, des cours et des résultats */
+.motif {
+    height: 163px;
+    border: 1px solid rgb(220,230,255);
+    width: 919px;
+}
+
+.motif-gauche {
+    height: 163px;
+    width: 163px;
+    float: left;
+    align-content: center;
+    border-right: 1px solid rgb(220,230,255);
+}
+
+.motif-gauche-img {
+    height: 163px;
+    width: 163px;
+    align-content: center;
+}
+
+.motif-droite {
+    height: 163px;
+    float: right;
+    width: 755px;
+}
+
+.motif-droite-eleve {
+    float: left;
+    width: 570px;
+    height: 163px;
+}
+
+.motif-droite-titre {
+    height: 40px;
+    background-color: rgb(245,251,255);
+    border-bottom: 1px solid rgb(220,230,255);
+    color: royalblue;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.motif-droite-titre-texte {
+    color: royalblue;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgb(245,251,255);
+}
+
+
+.motif-droite-contenu {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/* *********************************************************** */
+/* caractéristiques pour le lien dans le motif motifcourschoix */
+
+.motif-droite-cours-lien {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    display: block;
+    padding: 10px 10px 10px 10px;
+}
+
+.motif-droite-cours-lien:hover {
+    color: black;
+    background-color: rgb(220,230,255);
+    border-radius: 5px;
+}
+/* *********************************************************** */
+/* caractéristiques pour le menu de liens dans le motif motifeleve */
+
+.motif-droite-eleve-menu {
+    width: 184px;
+    float: right;
+    padding-top: 12px;
+    border-left: 1px solid rgb(220,230,255);
+    height: 151px;
+}
+
+.motif-droite-eleve-menu-lien {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    display: block;
+    padding: 10px 10px 10px 10px;
+}
+
+.motif-droite-eleve-menu-lien:hover {
+    color: black;
+    background-color: rgb(220,230,255);
+    border-radius: 5px;
+}
+/* *********************************************************** */
+/* caracteristiques d'une zone de saisie */
+.saisie-texte {
+    padding: 5px 5px 3px 3px;
+    margin-right: 10px;
+    border: 1px solid dimgray;
+    border-radius: 3px;
+}
+/* *********************************************************** */
+/* caracteristiques des zones pour ajouter/modifier un élève */
+.cadre-am {
+    border: 1px solid rgb(220,230,255);
+    width: 919px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cadre-am-upload {
+    border: 1px solid rgb(220,230,255);
+    width: 600px;
+    height: 163px;
+    display: inline-block;
+}
+
+.cadre-am-upload-droite {
+    height: 163px;
+    width: 163px;
+    float: right;
+    left: 0;
+    border-left: 1px solid rgb(220,230,255);
+}
+
+.cadre-am-upload-img {
+    height: 163px;
+    width: 163px;
+}
+
+.cadre-am-upload-gauche {
+    text-align: center;
+    padding-top: 71px;
+    right: 0;
+    float: left;
+    width: 435px;
+}
+/* *********************************************************** */
+/* caractéristiques pour les boutons */
+
+.bouton {
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.bouton:hover {
+    background-color: rgb(220,230,255);
+    color: black;
+}
+/* *********************************************************** */
+/* caractéristiques du message d'erreur */
+.msg {
+    visibility: visible;
+    text-align: center;
+    font-size: 15px;
+    display: block;
+}
+
+

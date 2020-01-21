@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace Tournois_ASP.CoucheAccesBD
 {
-    public class ExceptionAccesBD
+    public class ExceptionAccesBD : Exception
     {
+        public ExceptionAccesBD(string msgDetail) : base(msgDetail)
+        {
+        }
     }
 }
