@@ -10,6 +10,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Joueur\Erreur.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Joueur\Ajouter.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Joueur\ListerTous.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Equipe\Erreur.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

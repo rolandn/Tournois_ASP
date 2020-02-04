@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Data.SqlClient;using Tournois_ASP.CoucheAccesBD;
+using System.Data.SqlClient;
+using Tournois_ASP.CoucheAccesBD;
+
 
 namespace Tournois_ASP.CoucheAccesBD
 {
@@ -30,15 +32,35 @@ namespace Tournois_ASP.CoucheAccesBD
             }
         }
         /**
-        * méthode qui fournit une instance d'ArbitreDAO
-        * retour : l'instance d'ArbitreDAO
+        * méthode qui fournit une instance d'objet
+        * retour : l'instance d'objet
         */
         public EquipeDAO GetEquipeDAO()
         {
             return new EquipeDAO(SqlCmd);
         }
-        
-        
+
+        public JoueurDAO GetJoueurDAO()
+        {
+            return new JoueurDAO(SqlCmd);
+        }
+
+        public ArbitreDAO GetArbitreDAO()
+        {
+            return new ArbitreDAO(SqlCmd);
+        }
+
+        public RencontreDAO GetRencontreDAO()
+        {
+            return new RencontreDAO(SqlCmd);
+        }
+
+        public TableDAO GetTableDAO()
+        {
+            return new TableDAO(SqlCmd);
+        }
+
+
         /**
         * méthode qui débute explicitement une transaction
         * 

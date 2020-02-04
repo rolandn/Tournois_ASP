@@ -9,7 +9,7 @@ using Tournois_ASP.CoucheAccesBD;
 
 namespace Tournois_ASP.Controllers
 {
-    public class EquipeController : Controller
+    public class RencontreController : Controller
     {
         private FabriqueDAO FabDAO = new FabriqueDAO();
         // Méthode qui sélectionne la vue qui liste tous les cours
@@ -22,7 +22,7 @@ namespace Tournois_ASP.Controllers
         {
             try
             {
-                ViewBag.ListeEquipe = FabDAO.GetEquipeDAO().ListerTous();
+                ViewBag.ListeRencontre = FabDAO.GetRencontreDAO().ListerTous();
                 return View();
             }
             catch (ExceptionAccesBD e)

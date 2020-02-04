@@ -22,6 +22,10 @@ namespace Tournois_ASP.CoucheAccesBD
          * méthode qui lit dans la base de données tous les élèves
          * retour : la liste de tous les élèves
          */
+
+
+        // ********* LISTER TOUS  *******************
+
         public override List<Equipe> ListerTous()
         {
             List<Equipe> liste = new List<Equipe>();

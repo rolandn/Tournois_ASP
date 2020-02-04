@@ -1,0 +1,80 @@
+﻿
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tournois_ASP</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/boostrap.css" />
+        <link rel="stylesheet" href="~/css/boostrap-grid.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/boostrap.css" />
+    <link rel="stylesheet" href="~/css/boostrap-grid.css" />
+</head>
+
+@model Tournois_ASP.Models.Joueur;
+
+
+<h1>Ajouter un joueur</h1>
+<div class="cadre-am">
+    <form action="/Joueur/AjouterSuite" method="post" enctype="multipart/form-data">  <!-- sans doute ici avec AjouterSuite que j'ai une erreur-->
+        <label>Numéro:</label>
+        <input asp-for="Idj" name="Idj" maxlength="20" class="saisie-texte"
+               style="width:175px;" required="required" />
+        <br /><br />
+        <label>Nom:</label>
+        <input asp-for="Nom" name="Nom" maxlength="20" class="saisie-texte"
+               style="width:175px;" required="required" />
+        <br /><br />
+        <label>Prénom:</label>
+        <input asp-for="Prenom" name="Prenom" maxlength="20" class="saisie-texte"
+               style="width:175px;" required="required" />
+        <br /><br />
+        <label>Style:</label>
+        <input asp-for="Style" name="Style" maxlength="20" class="saisie-texte"
+               style="width:175px;" required="required" />
+        <br /><br />
+
+        <br /><br />
+        <!--    <div class="cadre-am-upload">
+            <div class="cadre-am-upload-gauche">
+                Photo JPG:
+                <input type="file" id="fichierImage" name="NomImage"
+                       onchange="AfficherImage(this);" />
+            </div>
+            <div class="cadre-am-upload-droite">
+                <img id="FichierImageJoueur" class="cadre-am-upload-img"
+                     src="~/images/aucuneimage.jpg" />
+            </div>
+        </div>  -->
+        <br /><br />
+        <button type="submit" class="bouton">Continuer</button>
+        <button type="button" class="bouton" onclick="location.reload();">Réinitialiser</button>
+    </form>
+</div>
+
+<!-- <script>
+    // réafficher au départ l'image de l'élève quand on revient sur la page à cause ...
+    // ... d'un clic sur le bouton back ou sur le bouton forward du navigateur
+    AfficherImage(document.getElementById('fichierImage'));
+    // fonction qui affiche l'image de l'élève dans la page après son chargement
+    function AfficherImage(uploader) {
+        if (uploader.files && uploader.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.images["FichierImageJoueur"].src = e.target.result;
+            }
+            reader.readAsDataURL(uploader.files[0]);
+        }
+    }
+</script>  -->

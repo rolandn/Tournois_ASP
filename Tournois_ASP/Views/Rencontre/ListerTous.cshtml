@@ -1,7 +1,68 @@
-﻿@{
-    ViewData["Title"] = "About";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+﻿
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Les rencontres"] - Tournois_ASP</title>
 
-<p>Use this area to provide additional information.</p>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/boostrap.css" />
+        <link rel="stylesheet" href="~/css/boostrap-grid.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/boostrap.css" />
+    <link rel="stylesheet" href="~/css/boostrap-grid.css" />
+</head>
+
+<body class="container">
+
+    <link rel="stylesheet" href="~/css/boostrap.css" />
+    <link rel="stylesheet" href="~/css/boostrap-grid.css" />
+
+    <div class="col px-md-5">
+        <div class="p-3 border bg-light">
+            <h1>Les rencontres</h1>
+            @foreach (var rencontre in ViewBag.ListeRencontre)
+            {
+                <div class="row">
+
+                    <div class="col-auto">
+                        <div class="col">
+
+                        </div>
+                        <div class="col-auto">
+                            <b>N° de la rencontre : </b>@rencontre.Idr
+                            <br /><br />
+                            <b>Phase de la rencontre : </b>@rencontre.Phase
+                            <br /><br />
+                            <b>N° de l'équipe 1 : </b>@rencontre.NumEquipe1
+                            <br /><br />
+                            <b>N° de l'équipe 2 : </b>@rencontre.NumEquipe2
+                            <br /><br />
+                            <b>N° de l'arbitre : </b>@rencontre.NumArbitre
+                            <br /><br />
+                            <b>N° de la table : </b>@rencontre.NumTable
+                            <br /><br />
+                            <b>N° de l'équipe gagnante : </b>@rencontre.NumGagnant
+                            <br /><br />
+                            <b>Score : </b>@rencontre.Score
+                            <br /><br />
+
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+            }
+        </div>
+    </div>
+</body>
+
