@@ -16,6 +16,8 @@ namespace Tournois_ASP.Models
         public int NumGagnant { get; set; }
         public string Score { get; set; }
 
+        public Rencontre() { }
+
         public Rencontre (int idr, string phase, int numEquipe1, int numEquipe2, int numArbitre, int numTable, int numGagnant, string score)
         {
             Idr = idr;

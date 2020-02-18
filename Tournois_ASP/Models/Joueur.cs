@@ -13,6 +13,9 @@ namespace Tournois_ASP.Models
         public string Style { get; set; }
         public string NomImage { get; set; }
 
+        public Joueur()
+        { }
+
         public Joueur(int idj, string nom, string prenom, string style, string nomImage)
         {
             Idj = idj;

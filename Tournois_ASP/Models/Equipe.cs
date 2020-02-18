@@ -12,6 +12,8 @@ namespace Tournois_ASP.Models
         public int Joueur1 { get; set; }
         public int Joueur2 { get; set; }
 
+        public Equipe() { }
+
         public Equipe (int ide, string nom, int joueur1, int joueur2)
         {
             Ide = ide;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Tournois_ASP.Models;
 using Tournois_ASP.CoucheAccesBD;
+using Tournois_ASP.coucheMetier;
 
 namespace Tournois_ASP.Controllers
 {
@@ -30,6 +31,41 @@ namespace Tournois_ASP.Controllers
                 ViewBag.Message = e.Message;
                 return View("Erreur");
             }
+        }
+
+        // ************* AJOUTER ********************
+
+        [HttpGet]
+        public IActionResult Ajouter()
+        {
+            return View();
+        }
+
+        // Méthode du bouton pour enregistrer le joueur
+        [HttpPost]
+        public IActionResult AjouterSuite(Equipe equipe)
+        {
+            try
+            {
+
+                new CoucheMetier().TesterContraintesEquipe(equipe);
+                FabDAO.DebuterTransaction();
+                FabDAO.GetEquipeDAO().Ajouter(equipe);
+                FabDAO.ValiderTransaction();
+                return RedirectToAction("ListerTous");
+
+            }
+            catch (ExceptionMetier e)
+            {
+                ViewBag.Message = e.Message;
+            }
+            catch (Exception e)
+            {
+                // on sait que l'upload du fichier a échoué. On peut annuler l'ajout dans la BD
+                FabDAO.AnnulerTransaction();
+                ViewBag.Message = e.Message;
+            }
+            return View("Erreur");
         }
 
     }

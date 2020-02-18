@@ -38,7 +38,8 @@ namespace Tournois_ASP.CoucheAccesBD
                     Convert.ToString(sqlReader["nom"]),
                     Convert.ToString(sqlReader["prenom"]),
                     Convert.ToInt32(sqlReader["experience"])));
-                sqlReader.Close();
+                sqlReader.Close();
+
             }
             catch (Exception e)
             {

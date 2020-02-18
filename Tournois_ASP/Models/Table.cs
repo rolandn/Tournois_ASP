@@ -10,6 +10,8 @@ namespace Tournois_ASP.Models
         public int Idt { get; set; }
         public int Position { get; set; }
 
+        public Table() { }
+
         public Table (int idt, int position)
         {
             Idt = idt;

@@ -22,34 +22,31 @@
     <link rel="stylesheet" href="~/css/boostrap-grid.css" />
 </head>
 
-@model Tournois_ASP.Models.Joueur;
+@model Tournois_ASP.Models.Equipe;
 
 
-<h1>Ajouter un joueur</h1>
+<h1>Ajouter une équipe</h1>
 <div class="cadre-am">
-    <form action="/Joueur/AjouterSuite" method="post" enctype="multipart/form-data">
+    <form action="/Equipe/AjouterSuite" method="post" enctype="multipart/form-data">
         <!-- sans doute ici avec AjouterSuite que j'ai une erreur-->
         <label>Numéro:</label>
-        <input asp-for="Idj" name="Idj" maxlength="20" class="saisie-texte"
+        <input asp-for="Ide" name="Idj" maxlength="20" class="saisie-texte"
                style="width:175px;" required="required" />
         <br /><br />
         <label>Nom:</label>
         <input asp-for="Nom" name="Nom" maxlength="20" class="saisie-texte"
                style="width:175px;" required="required" />
         <br /><br />
-        <label>Prénom:</label>
-        <input asp-for="Prenom" name="Prenom" maxlength="20" class="saisie-texte"
+              <label>Joueur1</label>
+        <input asp-for="Joueur1" name="Joueur1" maxlength="20" class="saisie-texte"
                style="width:175px;" required="required" />
         <br /><br />
-        <label>Style:</label>
-        <input asp-for="Style" name="Style" maxlength="20" class="saisie-texte"
+              <label>Joueur2</label>
+        <input asp-for="Joueur2" name="Joueur2" maxlength="20" class="saisie-texte"
                style="width:175px;" required="required" />
         <br /><br />
 
-        <label>Nom Image:</label>
-        <input asp-for="NomImage" name="NomImage" maxlength="20" class="saisie-texte"
-               style="width:175px;" required="required" />
-        <br /><br />
+        
 
         <br /><br />
         <!--    <div class="cadre-am-upload">

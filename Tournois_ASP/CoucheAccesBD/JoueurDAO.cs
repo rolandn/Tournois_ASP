@@ -10,7 +10,7 @@ namespace Tournois_ASP.CoucheAccesBD
 {
     public class JoueurDAO : BaseDAO<Joueur>
     {
-        private object idj;
+        // private object idj;
 
         /**
 * Constructeur
@@ -56,25 +56,25 @@ namespace Tournois_ASP.CoucheAccesBD
         {
             try
             {
-                int numJoueur;
+                int idj;
                 SqlCmd.CommandText = "select max(idj) + 1 from joueurs";
                 SqlCmd.Parameters.Clear();
                 SqlDataReader sqlReader = SqlCmd.ExecuteReader();
                 sqlReader.Read();
                 if (sqlReader[0] == DBNull.Value)
-                    numJoueur = 1;
+                    idj = 1;
                 else
-                    numJoueur = Convert.ToInt32(sqlReader[0]);
+                    idj = Convert.ToInt32(sqlReader[0]);
                 sqlReader.Close();
                 SqlCmd.CommandText =
-                "insert into joueur(idj,nom,prenom,style,nomImage) " +
-               "values(@idj,@Nnom,@prenom,@style,@nomImage)";
+                "insert into joueurs(idj,nom,prenom,style,nomImage) " +
+               "values(@idj,@nom,@prenom,@style,@nomImage)";
                 SqlCmd.Parameters.Clear();
                 SqlCmd.Parameters.Add("@idj", SqlDbType.Int).Value = idj;
                 SqlCmd.Parameters.Add("@nom", SqlDbType.VarChar).Value = obj.Nom;
                 SqlCmd.Parameters.Add("@prenom", SqlDbType.VarChar).Value = obj.Prenom;
                 SqlCmd.Parameters.Add("@style", SqlDbType.VarChar).Value = obj.Style;
-                SqlCmd.Parameters.Add("@Annee", SqlDbType.VarChar).Value = obj.NomImage;
+                SqlCmd.Parameters.Add("@nomImage", SqlDbType.VarChar).Value = obj.NomImage;
                
                 SqlCmd.ExecuteNonQuery();
             }

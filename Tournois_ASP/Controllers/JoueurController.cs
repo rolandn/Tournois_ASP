@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Tournois_ASP.Models;
 using Tournois_ASP.CoucheAccesBD;
-using Tournois_ASP.CoucheMetier;
+using Tournois_ASP.coucheMetier;
 
 namespace Tournois_ASP.Controllers
 {
@@ -47,8 +47,12 @@ namespace Tournois_ASP.Controllers
         {
             try
             {
+                
+                new CoucheMetier().TesterContraintesJoueur(joueur);
                 FabDAO.DebuterTransaction();
                 FabDAO.GetJoueurDAO().Ajouter(joueur);
+                FabDAO.ValiderTransaction();
+                return RedirectToAction("ListerTous");
 
             }
             catch (ExceptionMetier e)

@@ -12,6 +12,8 @@ namespace Tournois_ASP.Models
         public string Prenom { get; set; }
         public int Experience { get; set; }
 
+        public Arbitre () { }
+
         public Arbitre(int ida, string nom, string prenom, int experience)
         {
             Ida = ida;
